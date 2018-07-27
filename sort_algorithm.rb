@@ -169,7 +169,7 @@ def counting_sort(a)
   (0...counts.size).map{|i| [i+min]*counts[i]}.flatten  
 end  
 
-# Radix sort
+# 基数排序(Radix sort)
 def kth_digit(n, i)  
   while(i > 1)  
     n = n / 10  
@@ -198,7 +198,7 @@ def radix_sort(a)
 end  
 
 
-# Bucket sort
+# 桶排序(Bucket sort)
 def quick_sort(a)  
   (x=a.pop) ? quick_sort(a.select{|i| i <= x}) + [x] + quick_sort(a.select{|i| i > x}) : []  
 end  
@@ -226,7 +226,5 @@ def bucket_sort(a)
 end  
   
 a = [0.75, 0.13, 0, 0.44, 0.55, 0.01, 0.98, 0.1234567]  
-p bucket_sort(a)  
+bucket_sort(a)  
   
-# Result:   
-[0, 0.01, 0.1234567, 0.13, 0.44, 0.55, 0.75, 0.98]  
